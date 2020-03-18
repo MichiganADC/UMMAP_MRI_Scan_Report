@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# ummap_mri_scan_report.py
+
 # Import modules
 
 import re
@@ -98,4 +100,6 @@ df_ug_coal = df_ug_coal.apply(lambda col: col.apply(zero_to_nan))
 
 # Write to CSV
 
-df_ug_coal.to_csv("./UMMAP_MRIScanReport.csv", index=False)
+local_file_dir = "."
+local_file_path = local_file_dir + "/UMMAP_MRI_Scan_Report.csv"
+df_ug_coal.to_csv(local_file_path, index=False)
