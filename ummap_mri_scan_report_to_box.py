@@ -28,7 +28,7 @@ try:
     new_file = client.file(file_id).update_contents(local_file_path)
 except BoxAPIException as e:
     print(e.context_info)
-    print(f"File {local_file_name} doesn't exist on Box. Uploading new file.")
+    print(f"File {local_file_path} doesn't exist on Box. Uploading new file.")
     new_file = client.folder(folder_id).upload(local_file_path)
 
 print(f"File {new_file.name} uploaded to Box with file ID {new_file.id}.")
