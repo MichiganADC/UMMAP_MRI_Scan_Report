@@ -16,7 +16,7 @@ import box_config
 client = box_config.get_authenticated_client(box_config.pathToConfigJson)
 
 # Define local file to upload
-local_file_dir = "."
+local_file_dir = "/home/airflow/scripts/UMMAP_MRI_Scan_Report"
 local_file_path = local_file_dir + "/UMMAP_MRI_Scan_Report.csv"
 
 # Define Box folder ID and file ID
